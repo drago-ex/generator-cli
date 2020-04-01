@@ -1,0 +1,24 @@
+{
+	"name": "drago-ex/generator-cli",
+	"type": "project",
+	"description": "Generating entity from database.",
+	"license": [
+		"MIT"
+	],
+	"authors": [
+		{
+			"name": "Zdeněk Papučík",
+			"homepage": "https://github.com/accgit"
+		}
+	],
+	"require": {
+	"php": ">=7.1",
+		"drago-ex/generator": "^1.0",
+	  	"nette/bootstrap": "^3.0",
+	  	"tracy/tracy": "^2.7",
+		"dg/composer-cleaner": "^2.0"
+	},
+	"autoload": {
+		"classmap": ["Bootstrap.php"]
+	}
+}
