@@ -14,8 +14,8 @@
 	"require": {
 	"php": ">=7.1",
 		"drago-ex/generator": "^1.0",
-	  	"nette/bootstrap": "^3.0",
-	  	"tracy/tracy": "^2.7",
+		"nette/bootstrap": "^3.0",
+		"tracy/tracy": "^2.7",
 		"dg/composer-cleaner": "^2.0"
 	},
 	"autoload": {

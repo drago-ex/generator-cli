@@ -7,15 +7,15 @@ extensions:
 
 # generator options
 generator:
-    path: entity
-    namespace: Entity
-    suffix: ''
+	path: entity
+	namespace: Entity
+	suffix: ''
 
 
 # symfony console
 console:
-    name: Symfony Console
-    lazy: false
+	name: Symfony Console
+	lazy: false
 
 
 # database connection
