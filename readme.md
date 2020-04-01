@@ -22,5 +22,5 @@ Basic configuration for entity generator.
 ## Installation
 
 ```
-composer require drago-ex/generator-cli
+composer create-project drago-ex/generator-cli
 ```
