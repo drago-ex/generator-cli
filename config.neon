@@ -8,7 +8,7 @@ extensions:
 # generator options
 generator:
 	path: entity
-	namespace: Entity
+	namespace: App\Entity
 
 
 # symfony console
