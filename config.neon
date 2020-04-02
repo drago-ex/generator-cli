@@ -9,7 +9,6 @@ extensions:
 generator:
 	path: entity
 	namespace: Entity
-	suffix: ''
 
 
 # symfony console
