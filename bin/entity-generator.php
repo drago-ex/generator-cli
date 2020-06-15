@@ -1,9 +1,11 @@
 #!/usr/bin/env php
 <?php
 
+use Contributte\Console\Application;
+
 require __DIR__ . '/../vendor/autoload.php';
 
 exit(Bootstrap::boot()
 	->createContainer()
-	->getByType(Contributte\Console\Application::class)
+	->getByType(Application::class)
 	->run());
