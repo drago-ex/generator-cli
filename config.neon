@@ -2,13 +2,6 @@
 extensions:
 	dibi: Dibi\Bridges\Nette\DibiExtension22
 	console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
-	generator: Drago\Generator\DI\GeneratorExtension
-
-
-# generator options
-generator:
-	path: entity
-	namespace: App\Entity
 
 
 # symfony console
