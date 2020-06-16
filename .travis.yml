@@ -19,7 +19,7 @@ jobs:
       install:
         - travis_retry composer create-project nette/code-checker temp/code-checker ^3 --no-progress
       script:
-        - php temp/code-checker/code-checker --ignore entity-generator.php
+        - php temp/code-checker/code-checker --strict-types --ignore entity-generator.php
 
 
     - name: Nette Coding Standard
