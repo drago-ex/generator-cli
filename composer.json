@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/generator-cli",
 	"type": "project",
-	"description": "Basic configuration for entity generator.",
+	"description": "Basic configuration for generator.",
 	"license": [
 		"MIT"
 	],
