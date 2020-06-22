@@ -12,12 +12,17 @@
 		}
 	],
 	"require": {
-		"php": ">=7.2",
+		"php": ">=7.4",
 		"nette/bootstrap": "^3.0",
+		"drago-ex/generator": "@dev",
 		"tracy/tracy": "^2.7",
 		"dg/composer-cleaner": "^2.0"
 	},
 	"autoload": {
 		"classmap": ["Bootstrap.php"]
+	},
+	"scripts": {
+		"generator-entity": "php bin/generator make:entity",
+		"generator-form-data": "php bin/generator make:formData"
 	}
 }
