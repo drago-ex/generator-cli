@@ -5,7 +5,7 @@
 <h3 align="center">Drago Extension</h3>
 <p align="center">Simple packages built on Nette Framework</p>
 
-## Info
+## Drago Generator CLI
 Basic configuration for generator.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/generator/master/license.md)
