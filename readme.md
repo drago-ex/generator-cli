@@ -6,7 +6,6 @@
 <p align="center">Simple packages built on Nette Framework</p>
 
 ## Info
-
 Basic configuration for generator.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/generator/master/license.md)
@@ -14,13 +13,11 @@ Basic configuration for generator.
 [![Build Status](https://travis-ci.org/drago-ex/generator-cli.svg?branch=master)](https://travis-ci.org/drago-ex/generator-cli)
 [![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/generator-cli/badge)](https://www.codefactor.io/repository/github/drago-ex/generator-cli)
 
-## Requirements
-
+## Technology
 - PHP 7.4 or higher
 - composer
 
 ## Installation
-
 ```
 composer create-project drago-ex/generator-cli
 ```
