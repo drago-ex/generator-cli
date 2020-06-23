@@ -6,7 +6,7 @@
 <p align="center">Extension for Nette Framework</p>
 
 ## Drago Generator CLI
-Basic configuration for generator.
+Basic configuration for Drago Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/generator/master/license.md)
 [![GitHub version](https://badge.fury.io/gh/drago-ex%2Fgenerator-cli.svg)](https://badge.fury.io/gh/drago-ex%2Fgenerator-cli)
