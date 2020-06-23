@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/generator-cli",
 	"type": "project",
-	"description": "Basic configuration for generator.",
+	"description": "Basic configuration for Drago Generator",
 	"license": [
 		"MIT"
 	],
