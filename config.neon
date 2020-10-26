@@ -12,21 +12,24 @@ generator:
 	# generator entity
 	path: %appDir%/entity
 	constant: true
+	constantLength: true
+	references: false
 	suffix: Entity
 	extends: Drago\Database\Entity
 	extendsOn: true
 	final: true
 	namespace: App\Entity
-	attributeColumn: true
 
-	# generator form data
-	pathFormData: %appDir%/data
-	constantFormData: true
-	suffixFormData: Data
-	extendsFormData: Drago\Utils\ExtraArrayHash
-	extendFormDataOn: true
-	finalFormData: true
-	namespaceFormData: App\Data
+	# generator data class
+	pathDataClass: %appDir%/data
+	constantDataClass: true
+	constantLengthDataClass: true
+	referencesDataClass: false
+	suffixDataClass: Data
+	extendsDataClass: Drago\Utils\ExtraArrayHash
+	extendsOnDataClass: true
+	finalDataClass: true
+	namespaceDataClass: App\Data
 
 
 # symfony console
