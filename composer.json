@@ -23,6 +23,6 @@
 	},
 	"scripts": {
 		"generator-entity": "php bin/generator make:entity",
-		"generator-form-data": "php bin/generator make:formData"
+		"generator-data-class": "php bin/generator make:dataClass"
 	}
 }
