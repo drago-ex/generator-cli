@@ -12,7 +12,7 @@ generator:
 	# generator entity
 	path: %appDir%/entity
 	constant: true
-	constantLength: true
+	constantLength: false
 	references: false
 	suffix: Entity
 	extends: Drago\Database\Entity
