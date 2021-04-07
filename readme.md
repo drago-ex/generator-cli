@@ -10,7 +10,7 @@ Basic configuration for Drago Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/generator/master/license.md)
 [![GitHub version](https://badge.fury.io/gh/drago-ex%2Fgenerator-cli.svg)](https://badge.fury.io/gh/drago-ex%2Fgenerator-cli)
-[![Build Status](https://travis-ci.org/drago-ex/generator-cli.svg?branch=master)](https://travis-ci.org/drago-ex/generator-cli)
+[![Build Status](https://travis-ci.com/drago-ex/generator-cli.svg?branch=master)](https://travis-ci.org/drago-ex/generator-cli)
 [![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/generator-cli/badge)](https://www.codefactor.io/repository/github/drago-ex/generator-cli)
 
 ## Technology
