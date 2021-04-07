@@ -17,18 +17,18 @@ generator:
 	suffix: Entity
 	extends: Drago\Database\Entity
 	extendsOn: true
-	final: true
+	final: false
 	namespace: App\Entity
 
 	# generator data class
 	pathDataClass: %appDir%/data
 	constantDataClass: true
-	constantLengthDataClass: true
+	constantLengthDataClass: false
 	referencesDataClass: false
 	suffixDataClass: Data
 	extendsDataClass: Drago\Utils\ExtraArrayHash
 	extendsOnDataClass: true
-	finalDataClass: true
+	finalDataClass: false
 	namespaceDataClass: App\Data
 
 
