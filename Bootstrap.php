@@ -1,13 +1,12 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 use Nette\Configurator;
 
 
 class Bootstrap
 {
-
 	public static function boot(): Configurator
 	{
 		$conf = new Configurator;
