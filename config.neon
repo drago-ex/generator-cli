@@ -6,28 +6,31 @@ extensions:
 
 # generator
 generator:
-	# base
+	# base (typical of Oracle)
 	lower: false
 
 	# generator entity
 	path: %appDir%/entity
+	tableName: null
+	primaryKey: null
+	columnInfo: false
 	constant: true
 	constantLength: false
 	references: false
 	suffix: Entity
-	extends: Drago\Database\Entity
 	extendsOn: true
+	extends: Drago\Database\Entity
 	final: false
 	namespace: App\Entity
 
 	# generator data class
 	pathDataClass: %appDir%/data
 	constantDataClass: true
-	constantLengthDataClass: false
+	constantLengthDataClass: true
 	referencesDataClass: false
 	suffixDataClass: Data
-	extendsDataClass: Drago\Utils\ExtraArrayHash
 	extendsOnDataClass: true
+	extendsDataClass: Drago\Utils\ExtraArrayHash
 	finalDataClass: false
 	namespaceDataClass: App\Data
 
