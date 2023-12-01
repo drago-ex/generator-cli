@@ -11,6 +11,8 @@ generator:
 
 	# generator entity
 	path: %appDir%/entity
+	tableName: null
+	primaryKey: null
 	columnInfo: false
 	constant: true
 	constantLength: false
