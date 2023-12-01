@@ -12,4 +12,4 @@ services:
     volumes:
       - ./:/var/www/html/
     ports:
-      - 8001:80
+      - "8010:80"
