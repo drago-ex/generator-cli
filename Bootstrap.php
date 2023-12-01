@@ -11,8 +11,8 @@ class Bootstrap
 	{
 		$conf = new Configurator;
 		$conf->setDebugMode(true);
-		$conf->enableTracy(__DIR__ . '/log');
-		$conf->setTempDirectory(__DIR__ . '/storage');
+		$conf->enableTracy(__DIR__ . '/var/log');
+		$conf->setTempDirectory(__DIR__ . '/var');
 		$conf->addConfig(__DIR__ . '/config.neon');
 		return $conf;
 	}
