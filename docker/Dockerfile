@@ -32,7 +32,7 @@ ENV LD_LIBRARY_PATH /usr/lib/oracle/12.2/client64/lib/
 ENV ORACLE_HOME /usr/lib/oracle/12.2/client64/lib/
 
 # configure for php
-RUN echo 'instantclient,/usr/lib/oracle/12.2/client64/lib' | pecl install oci8-3.2.0 && docker-php-ext-enable oci8
+RUN echo 'instantclient,/usr/lib/oracle/12.2/client64/lib' | pecl install oci8-3.3.0 && docker-php-ext-enable oci8
 
 # the ports
 EXPOSE 80
