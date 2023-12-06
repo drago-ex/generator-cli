@@ -6,7 +6,8 @@ MAINTAINER Zdeněk Papučík <zdenek.papucik@gmail.com>
 ARG DEBIAN_FRONTEND=noninteractive
 
 # run commands
-RUN apt update && apt upgrade -y
+RUN apt update && apt upgrade -y && apt install -y libaio1
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # php extensions
 RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \
