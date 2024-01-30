@@ -29,7 +29,6 @@ generator:
 	constantLengthDataClass: true
 	referencesDataClass: false
 	suffixDataClass: Data
-	extendsOnDataClass: true
 	extendsDataClass: Drago\Utils\ExtraArrayHash
 	finalDataClass: false
 	namespaceDataClass: App\Data
