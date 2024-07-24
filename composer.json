@@ -21,7 +21,7 @@
 		"classmap": ["Bootstrap.php"]
 	},
 	"scripts": {
-		"generator-entity": "php bin/generator make:entity",
-		"generator-data-class": "php bin/generator make:dataClass"
+		"entity": "generator make:entity",
+		"data-class": "generator make:dataClass"
 	}
 }
