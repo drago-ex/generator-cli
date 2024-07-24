@@ -15,7 +15,7 @@ generator:
 	primaryKey: 'PrimaryKey'
 	columnInfo: false
 	constant: true
-	constantLength: false
+	constantSize: false
 	references: false
 	suffix: Entity
 	extendsOn: true
@@ -26,7 +26,7 @@ generator:
 	# generator data class
 	pathDataClass: %appDir%/data
 	constantDataClass: true
-	constantLengthDataClass: true
+	constantSizeDataClass: true
 	referencesDataClass: false
 	suffixDataClass: Data
 	extendsDataClass: Drago\Utils\ExtraArrayHash
