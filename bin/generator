@@ -5,7 +5,4 @@ use Symfony\Component\Console\Application;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-exit(Bootstrap::boot()
-	->createContainer()
-	->getByType(Application::class)
-	->run());
+exit(Bootstrap::console());
