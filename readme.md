@@ -7,7 +7,7 @@ Basic configuration for Drago Generator
 [![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/generator-cli/badge)](https://www.codefactor.io/repository/github/drago-ex/generator-cli)
 
 ## Technology
-- PHP 8.3 or higher
+- PHP 8.4 or higher
 - composer
 
 ## Installation
