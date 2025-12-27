@@ -6,9 +6,10 @@ Basic configuration for Drago Generator
 [![Coding Style](https://github.com/drago-ex/generator-cli/actions/workflows/coding-style.yml/badge.svg)](https://github.com/drago-ex/generator-cli/actions/workflows/coding-style.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/generator-cli/badge)](https://www.codefactor.io/repository/github/drago-ex/generator-cli)
 
-## Technology
-- PHP 8.3 or higher
-- composer
+## Requirements
+- PHP >= 8.3
+- Nette Framework
+- Composer
 
 ## Installation
 ```
