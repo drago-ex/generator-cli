@@ -15,10 +15,12 @@
 		"tracy/tracy": "^2.10"
 	},
 	"autoload": {
-		"classmap": ["Bootstrap.php"]
+		"psr-4": {
+			"App\\": "app"
+		}
 	},
 	"scripts": {
-		"entity": "generator app:entity",
-		"data-class": "generator app:dataClass"
+		"generate:entity": "vendor/bin/generator app:entity",
+		"generate:data-class": "vendor/bin/generator app:dataClass"
 	}
 }

@@ -2,7 +2,7 @@
 extensions:
 	dibi: Dibi\Bridges\Nette\DibiExtension22
 	console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
-	generator: Drago\Generator\DI\GeneratorExtension
+	generator: Drago\Generator\DI\GeneratorExtension(%consoleMode%)
 
 # generator
 generator:
@@ -10,7 +10,7 @@ generator:
 	lower: false
 
 	# generator entity
-	path: %appDir%/entity
+	path: %appDir%/Entity
 	tableName: 'Table'
 	primaryKey: 'PrimaryKey'
 	columnInfo: false
@@ -25,7 +25,7 @@ generator:
 	namespace: App\Entity
 
 	# generator data class
-	pathDataClass: %appDir%/data
+	pathDataClass: %appDir%/DataClass
 	constantDataClass: true
 	constantSizeDataClass: true
 	constantDataPrefix: 'Form'
@@ -33,7 +33,7 @@ generator:
 	suffixDataClass: Data
 	extendsDataClass: Drago\Utils\ExtraArrayHash
 	finalDataClass: false
-	namespaceDataClass: App\Data
+	namespaceDataClass: App\DataClass
 
 
 # symfony console
