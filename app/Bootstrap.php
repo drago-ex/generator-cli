@@ -52,7 +52,7 @@ final class Bootstrap
 	private function setupContainer(): void
 	{
 		// Adding configuration files from the current directory excluding the 'Translate' directory.
-		$this->configurator->addConfig($this->rootDir. '/config.neon');
+		$this->configurator->addConfig($this->rootDir . '/config.neon');
 	}
 
 
