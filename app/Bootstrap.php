@@ -4,30 +4,29 @@ declare(strict_types=1);
 
 namespace App;
 
-use Nette\Bootstrap\Configurator;
+use Drago\Bootstrap\ExtraConfigurator;
 use Nette\DI\Container;
 use Throwable;
 
 
-/** The Bootstrap class configures the application. */
 final class Bootstrap
 {
-	private Configurator $configurator;
+	private ExtraConfigurator $configurator;
 	private string $rootDir;
 
 
 	public function __construct()
 	{
 		$this->rootDir = dirname(__DIR__);
-		$this->configurator = new Configurator;
-		$this->configurator->setTempDirectory($this->rootDir . '/var');
+		$this->configurator = new ExtraConfigurator;
+		$this->configurator->setTempDirectory($this->rootDir . '/temp');
 	}
 
 
 	public function initializeEnvironment(): void
 	{
 		$this->configurator->setDebugMode(true);
-		$this->configurator->enableTracy($this->rootDir . '/var/log');
+		$this->configurator->enableTracy($this->rootDir . '/log');
 		$this->configurator->createRobotLoader()
 			->addDirectory(__DIR__)
 			->register();
@@ -39,7 +38,7 @@ final class Bootstrap
 	 */
 	private function setupContainer(): void
 	{
-		$this->configurator->addConfig($this->rootDir . '/config.neon');
+		$this->configurator->addFindConfig($this->rootDir);
 	}
 
 
@@ -60,8 +59,8 @@ final class Bootstrap
 	 */
 	public function bootConsoleApplication(): Container
 	{
-		$this->configurator->setDebugMode(false);
 		$this->initializeEnvironment();
+		$this->configurator->setDebugMode(false);
 		$this->setupContainer();
 		return $this->configurator->createContainer();
 	}
