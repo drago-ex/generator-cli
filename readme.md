@@ -7,12 +7,14 @@ Ready-to-use Drago Generator project with PHP and database Docker services.
 [![Coding Style](https://github.com/drago-ex/generator-cli/actions/workflows/coding-style.yml/badge.svg)](https://github.com/drago-ex/generator-cli/actions/workflows/coding-style.yml)
 
 ## Requirements
+
 - PHP >= 8.3
 - Nette Framework
 - Composer
 - Docker
 
 ## Installation
+
 ```bash
 composer create-project drago-ex/generator-cli
 ```
