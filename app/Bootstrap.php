@@ -36,15 +36,6 @@ final class Bootstrap
 	/**
 	 * @throws Throwable
 	 */
-	private function setupContainer(): void
-	{
-		$this->configurator->addFindConfig($this->rootDir);
-	}
-
-
-	/**
-	 * @throws Throwable
-	 */
 	public function bootWebApplication(): Container
 	{
 		$this->initializeEnvironment();
@@ -63,5 +54,14 @@ final class Bootstrap
 		$this->configurator->setDebugMode(false);
 		$this->setupContainer();
 		return $this->configurator->createContainer();
+	}
+
+
+	/**
+	 * @throws Throwable
+	 */
+	private function setupContainer(): void
+	{
+		$this->configurator->addFindConfig($this->rootDir);
 	}
 }
