@@ -18,3 +18,22 @@ Ready-to-use Drago Generator project with PHP and database Docker services.
 ```bash
 composer create-project drago-ex/generator-cli
 ```
+
+## Usage
+
+Start the PHP server and the database (connection in `app/db.neon`), then create your tables in the database `app`:
+
+```bash
+npm run docker:dev
+```
+
+Generate the classes inside the server container, for all tables or for one:
+
+```bash
+composer generate:entity
+composer generate:entity -- users
+composer generate:data-class -- users
+```
+
+Entities are written to `app/Entity`, data classes to `app/DataClass`. The options are set in `config.neon` and
+described in the [Drago Generator README](https://github.com/drago-ex/generator#options).

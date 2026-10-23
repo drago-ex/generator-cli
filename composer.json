@@ -43,8 +43,8 @@
 			"drago-install",
 			"drago-clean"
 		],
-		"generate:entity": "vendor/bin/generator app:entity",
-		"generate:data-class": "vendor/bin/generator app:dataClass"
+		"generate:entity": "docker compose exec server php vendor/bin/generator app:entity",
+		"generate:data-class": "docker compose exec server php vendor/bin/generator app:dataClass"
 	},
 	"license": "MIT"
 }

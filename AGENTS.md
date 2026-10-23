@@ -16,6 +16,11 @@ Use this file as package-specific guidance when working in this repository. Keep
 - `.github/`: CI workflows; keep their PHP versions and commands consistent with Composer and the package scripts.
 - `composer.json`: package metadata, dependency constraints, autoloading, and available Composer scripts.
 
+## Key Parts
+- `config.neon` registers the console and generator extensions and lists all generator options; `app/Bootstrap.php` provides `bootConsoleApplication()` for `vendor/bin/generator`.
+- `docker/`, `docker-compose*.yaml` and `app/db.neon` are installed by drago-install from project-docker and project-docker-db: never commit them to this repository (`copy` does not overwrite existing files, so a committed copy kept new projects on old Dockerfiles); delete them after a local composer install. They are not git-ignored, because the .gitignore goes into the created projects, which keep them.
+- The database host is `db` (Docker network), so the `generate:*` Composer scripts run the generator in the `server` container (`docker compose exec server ...`).
+
 ## Dependencies
 
 Composer constraints describe the package contract. Before changing integration behavior, inspect the source and the actual call sites in this package; do not infer runtime usage solely from dependency declarations.
