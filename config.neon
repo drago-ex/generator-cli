@@ -30,13 +30,13 @@ generator:
 	final: false
 	namespace: App\Entity
 
-	# generator data class
-	pathDataClass: %appDir%/DataClass
+	# generator data class (the values of a form, named *Values like in the drago-ex packages)
+	pathDataClass: %appDir%/Values
 	constantDataClass: true
 	constantSizeDataClass: true
 	constantDataPrefix: 'Form'
 	referencesDataClass: false
-	suffixDataClass: Data
+	suffixDataClass: Values
 	extendsDataClass: Drago\Utils\ExtraArrayHash
 	finalDataClass: false
-	namespaceDataClass: App\DataClass
+	namespaceDataClass: App\Values

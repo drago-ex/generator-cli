@@ -37,5 +37,5 @@ composer generate:entity -- users
 composer generate:data-class -- users
 ```
 
-Entity se zapisují do `app/Entity`, datové třídy do `app/DataClass`. Volby se nastavují v `config.neon` a
+Entity se zapisují do `app/Entity`, datové třídy (hodnoty formulářů, `*Values`) do `app/Values`. Volby se nastavují v `config.neon` a
 jsou popsané v [README Drago Generator](https://github.com/drago-ex/generator#options).

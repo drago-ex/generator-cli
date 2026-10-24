@@ -37,5 +37,5 @@ composer generate:entity -- users
 composer generate:data-class -- users
 ```
 
-Entities are written to `app/Entity`, data classes to `app/DataClass`. The options are set in `config.neon` and
+Entities are written to `app/Entity`, data classes (form values, `*Values`) to `app/Values`. The options are set in `config.neon` and
 described in the [Drago Generator README](https://github.com/drago-ex/generator#options).
