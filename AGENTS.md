@@ -7,12 +7,12 @@ Use this file as package-specific guidance when working in this repository. Keep
 - **Type**: project
 - **Purpose**: Basic configuration for Drago Generator
 - **PHP**: >=8.3 <9
-- **Runtime dependencies**: drago-ex/bootstrap (^2.0), drago-ex/generator (^1.1), drago-ex/project-docker (^2.0), drago-ex/project-docker-db (^2.0), tracy/tracy (^2.10)
+- **Runtime dependencies**: drago-ex/bootstrap (^2.0), drago-ex/generator (^2.0), drago-ex/project-docker (^2.0), drago-ex/project-docker-db (^2.0), tracy/tracy (^2.10)
 - **License**: MIT
 
 ## Repository Layout
 - `app/`: project application configuration and code.
-- `docker/`: Docker configuration.
+- `docker/`: Docker configuration installed into created projects by drago-install (not part of this repository, see Key Parts).
 - `.github/`: CI workflows; keep their PHP versions and commands consistent with Composer and the package scripts.
 - `composer.json`: package metadata, dependency constraints, autoloading, and available Composer scripts.
 

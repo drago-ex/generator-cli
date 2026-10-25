@@ -13,7 +13,7 @@ Ready-to-use Drago Generator project with PHP and database Docker services.
 - PHP >= 8.3, < 9
 - Nette Framework
 - Composer
-- Docker
+- Docker and Node.js (npm runs the Docker scripts)
 
 ## Installation
 
@@ -23,7 +23,8 @@ composer create-project drago-ex/generator-cli
 
 ## Usage
 
-Start the PHP server and the database (connection in `app/db.neon`), then create your tables in the database `app`:
+Start the PHP server and the database (connection in `app/db.neon`; from the host the database is on port 6033), then
+create your tables in the database `app`:
 
 ```bash
 npm run docker:dev
