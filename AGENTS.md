@@ -17,6 +17,7 @@ Use this file as package-specific guidance when working in this repository. Keep
 - `composer.json`: package metadata, dependency constraints, autoloading, and available Composer scripts.
 
 ## Key Parts
+- `Bootstrap::setupContainer()` loads `config.neon` and the configs of `app/` (`db.neon`), never a search of the whole root: that loaded the neon files of `vendor/` (phpstan, nette/bootstrap stubs) and the generator could not start. Debug mode stays on in the console, so a change of `config.neon` rebuilds the container. The `generate:*` scripts use `docker compose exec -T` (no TTY needed, e.g. the PhpStorm Composer runner).
 - `config.neon` registers the console and generator extensions and lists all generator options; `app/Bootstrap.php` provides `bootConsoleApplication()` for `vendor/bin/generator`.
 - `docker/`, `docker-compose*.yaml` and `app/db.neon` are installed by drago-install from project-docker and project-docker-db: never commit them to this repository (`copy` does not overwrite existing files, so a committed copy kept new projects on old Dockerfiles); delete them after a local composer install. They are not git-ignored, because the .gitignore goes into the created projects, which keep them.
 - The database host is `db` (Docker network), so the `generate:*` Composer scripts run the generator in the `server` container (`docker compose exec server ...`).

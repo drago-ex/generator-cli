@@ -50,18 +50,21 @@ final class Bootstrap
 	 */
 	public function bootConsoleApplication(): Container
 	{
+		// debug mode stays on: the container is rebuilt when config.neon changes (e.g. suffixDataClass)
 		$this->initializeEnvironment();
-		$this->configurator->setDebugMode(false);
 		$this->setupContainer();
 		return $this->configurator->createContainer();
 	}
 
 
 	/**
+	 * The settings of the generator (config.neon) and the configs of app/ (db.neon from project-docker-db);
+	 * not a search of the whole root, which would load the neon files of vendor/ as the application config.
 	 * @throws Throwable
 	 */
 	private function setupContainer(): void
 	{
-		$this->configurator->addFindConfig($this->rootDir);
+		$this->configurator->addConfig($this->rootDir . '/config.neon');
+		$this->configurator->addFindConfig(__DIR__);
 	}
 }
