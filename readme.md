@@ -1,7 +1,5 @@
 # Drago Generator CLI
 
-English | [Čeština](readme.cs.md)
-
 Ready-to-use Drago Generator project with PHP and database Docker services.
 
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fgenerator-cli.svg)](https://badge.fury.io/ph/drago-ex%2Fgenerator-cli)

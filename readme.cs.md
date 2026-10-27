@@ -1,7 +1,5 @@
 # Drago Generator CLI
 
-[English](readme.md) | Čeština
-
 Připravený projekt pro Drago Generator s PHP a databází v Dockeru.
 
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fgenerator-cli.svg)](https://badge.fury.io/ph/drago-ex%2Fgenerator-cli)
