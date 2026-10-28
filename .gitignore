@@ -4,7 +4,6 @@
 !/temp/.gitignore
 /log/*
 !/log/.gitignore
-/docker/mysql/
 
 /.idea/
 
