@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Drago\Bootstrap\ExtraConfigurator;
+use Nette\Bootstrap\Configurator;
 use Nette\DI\Container;
 use Throwable;
 use function dirname;
@@ -10,14 +10,14 @@ use function dirname;
 
 final class Bootstrap
 {
-	private ExtraConfigurator $configurator;
+	private Configurator $configurator;
 	private string $rootDir;
 
 
 	public function __construct()
 	{
 		$this->rootDir = dirname(__DIR__);
-		$this->configurator = new ExtraConfigurator;
+		$this->configurator = new Configurator;
 		$this->configurator->setTempDirectory($this->rootDir . '/temp');
 	}
 
@@ -57,13 +57,12 @@ final class Bootstrap
 
 
 	/**
-	 * The settings of the generator (config.neon) and the configs of app/ (db.neon from project-docker-db);
-	 * not a search of the whole root, which would load the neon files of vendor/ as the application config.
+	 * The settings of the generator (config.neon) and the database connection (local/db.neon from project-docker-db).
 	 * @throws Throwable
 	 */
 	private function setupContainer(): void
 	{
 		$this->configurator->addConfig($this->rootDir . '/config.neon');
-		$this->configurator->addFindConfig(__DIR__);
+		$this->configurator->addConfig($this->rootDir . '/local/db.neon');
 	}
 }

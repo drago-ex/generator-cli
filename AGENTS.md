@@ -7,7 +7,7 @@ Use this file as package-specific guidance when working in this repository. Keep
 - **Type**: project
 - **Purpose**: Basic configuration for Drago Generator
 - **PHP**: >=8.3 <9
-- **Runtime dependencies**: drago-ex/bootstrap (^2.0), drago-ex/generator (^2.0), drago-ex/project-docker (^1.0), drago-ex/project-docker-db (^1.0), tracy/tracy (^2.10)
+- **Runtime dependencies**: nette/bootstrap (^3.2), drago-ex/generator (^2.0), drago-ex/project-docker (^1.0), drago-ex/project-docker-db (^1.0), tracy/tracy (^2.10)
 - **License**: MIT
 
 ## Repository Layout
@@ -17,9 +17,9 @@ Use this file as package-specific guidance when working in this repository. Keep
 - `composer.json`: package metadata, dependency constraints, autoloading, and available Composer scripts.
 
 ## Key Parts
-- `Bootstrap::setupContainer()` loads `config.neon` and the configs of `app/` (`db.neon`), never a search of the whole root: that loaded the neon files of `vendor/` (phpstan, nette/bootstrap stubs) and the generator could not start. Debug mode stays on in the console, so a change of `config.neon` rebuilds the container. The `generate:*` scripts use `docker compose exec -T` (no TTY needed, e.g. the PhpStorm Composer runner).
+- `Bootstrap::setupContainer()` loads exactly `config.neon` and `local/db.neon` by `addConfig()`, no search (`app/` has no neon files; a search of the whole root loaded the neon files of `vendor/` and the generator could not start). Debug mode stays on in the console, so a change of `config.neon` rebuilds the container. The `generate:*` scripts use `docker compose exec -T` (no TTY needed, e.g. the PhpStorm Composer runner).
 - `config.neon` registers the console and generator extensions and lists all generator options; `app/Bootstrap.php` provides `bootConsoleApplication()` for `vendor/bin/generator`.
-- `docker/`, `docker-compose*.yaml` and `app/db.neon` are installed by drago-install from project-docker and project-docker-db: never commit them to this repository (`copy` does not overwrite existing files, so a committed copy kept new projects on old Dockerfiles); delete them after a local composer install. They are not git-ignored, because the .gitignore goes into the created projects, which keep them.
+- `docker/`, `docker-compose*.yaml` and `local/db.neon` are installed by drago-install from project-docker and project-docker-db: never commit them to this repository (`copy` does not overwrite existing files, so a committed copy kept new projects on old Dockerfiles); delete them after a local composer install. `docker/` and `docker-compose*.yaml` are not git-ignored, because the .gitignore goes into the created projects, which keep them; `local/` is git-ignored (files of one environment, drago-install copies `db.neon` again after a clone).
 - The database host is `db` (Docker network), so the `generate:*` Composer scripts run the generator in the `server` container (`docker compose exec server ...`).
 
 ## Dependencies

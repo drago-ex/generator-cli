@@ -5,6 +5,9 @@
 /log/*
 !/log/.gitignore
 
+# files written for this environment (database connection, installation lock)
+/local/
+
 /.idea/
 
 /composer.lock

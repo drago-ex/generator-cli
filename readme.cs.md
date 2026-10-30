@@ -21,7 +21,7 @@ composer create-project drago-ex/generator-cli
 
 ## Použití
 
-Spusťte PHP server a databázi (připojení v `app/db.neon`; z hostitele je databáze na portu 6033) a vytvořte
+Spusťte PHP server a databázi (připojení v `local/db.neon`; z hostitele je databáze na portu 6033) a vytvořte
 tabulky v databázi `app`:
 
 ```bash

@@ -21,7 +21,7 @@ composer create-project drago-ex/generator-cli
 
 ## Usage
 
-Start the PHP server and the database (connection in `app/db.neon`; from the host the database is on port 6033), then
+Start the PHP server and the database (connection in `local/db.neon`; from the host the database is on port 6033), then
 create your tables in the database `app`:
 
 ```bash
