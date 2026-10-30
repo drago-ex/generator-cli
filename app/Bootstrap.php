@@ -32,9 +32,7 @@ final class Bootstrap
 	}
 
 
-	/**
-	 * @throws Throwable
-	 */
+	/** @throws Throwable */
 	public function bootWebApplication(): Container
 	{
 		$this->initializeEnvironment();
@@ -44,9 +42,7 @@ final class Bootstrap
 	}
 
 
-	/**
-	 * @throws Throwable
-	 */
+	/** @throws Throwable */
 	public function bootConsoleApplication(): Container
 	{
 		// debug mode stays on: the container is rebuilt when config.neon changes (e.g. suffixDataClass)
