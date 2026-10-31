@@ -7,7 +7,7 @@ Use this file as package-specific guidance when working in this repository. Keep
 - **Type**: project
 - **Purpose**: Basic configuration for Drago Generator
 - **PHP**: >=8.3 <9
-- **Runtime dependencies**: nette/bootstrap (^3.2), drago-ex/generator (^2.0), drago-ex/project-docker (^1.0), drago-ex/project-docker-db (^1.0), tracy/tracy (^2.10)
+- **Runtime dependencies**: nette/bootstrap (^3.2), drago-ex/generator (^2.0), drago-ex/project-docker (^1.0), drago-ex/project-docker-db (^1.1), tracy/tracy (^2.10)
 - **License**: MIT
 
 ## Repository Layout
